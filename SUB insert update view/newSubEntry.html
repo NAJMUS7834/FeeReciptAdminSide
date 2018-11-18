@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<style type="text/css">
+body{
+font-weight:bold;
+}
+.one-half{
+width:50%;
+float:left;
+}
+
+table{
+width:90%;}
+
+.top{
+width:100%
+float:left;
+}
+td{
+height:30px;
+}
+input{
+width:100%;
+height:30px;
+font-weight:bold;
+}
+footer.second{
+
+	background-color:#544b59;
+	max-height:55px;
+	margin: 0;
+}
+footer.second p{
+
+	text-align:center;
+
+}
+.submit
+{
+	width:600px;
+	background:#ff5722;
+	border-color:transparent;
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+	letter-spacing:2px;
+	height:50px;
+	margin-top:10px;
+	font-size:18px;
+	margin-bottom:16px;
+	border:none;
+	outline:none;
+	border-bottom:1px solid gray;
+	width:100%;
+}
+h2{
+text-align:center;
+background-color:grey;
+}
+
+.submit:hover
+{
+	background-color:#f44336;
+	cursor:pointer;
+}
+
+header{
+	background-color:#6991AC;
+	width:100%;
+	height: 86px;
+
+}
+#header-inner{
+	max-width:1200px;
+	margin:0 auto;
+}
+#logo{
+	animation: yourAnimation1 2s forwards 0s linear;
+	margin:20px;
+	float: left;
+	width: 200px;
+	height: 60px;
+	background:url(img/VNH.png) no-repeat center;
+}
+
+@keyframes yourAnimation1{
+    0%{
+        transform: translateX(-20%);
+        opacity: 0.2;
+        }
+    50%{
+        transform: translateX(-10%);
+        opacity: 0.4;
+        }
+    100%{
+        transform: rotate(xx) translateX(0);
+        opacity: 1;
+        }
+}
+
+/*---Start Navigation--*/
+nav {
+	float: right;
+	padding:25px 20px 0 0;
+}
+
+ #menu-icon{
+	display: hidden;
+	width:40px;
+	height:40px;
+	background:url(img/nav.png) center;
+	}
+	a:hover#menu-icon{
+		border-radius: 4px 4px 0 0;
+	}
+ul{
+	list-style-type:none;
+	font-weight:bold;
+	font-family:Comic Sans MS;
+}
+nav ul li{
+	font-family:Comic Sans MS;
+	font-size:150%;
+	display: inline-block;
+	float: left;
+	padding: 10px;
+	font-weight:bold;
+}
+nav ul li a{
+	color:#f5f5f5;
+	font-weight:bold;
+	text-decoration:none;
+}
+nav ul li a:hover{
+	color: #C3D7DF;
+}
+/*----------------------MEDIA!!!----------------------------*/
+ @media screen and (max-width: 768px){
+ #logo{
+		 margin:15px 0 20px -25px;
+		 background:url(img/VNH-mobile.png) no-repeat center;
+	 }
+	 #menu-icon{
+		 display:inline-block;
+	 }
+	 nav ul,nav:active ul{
+		 display:none;
+		 z-index:1000;
+		 position:absolute;
+		 padding:20px;
+		 background:#6991AC;
+		 right: 20px;
+		 top:60px;
+		 border:2px solid #fff;
+		 border-radius: 2px 0 2px 2px;
+         width:50%;
+		  }
+	 nav:hover ul{
+		 display:block;
+	 }
+	 nav li{
+		 text-align:center;
+		 width:100%;
+		 padding:10px 0 ;
+	 }
+ .one-half{
+width:100%;
+
+}
+
+table{
+width:90%;}
+
+.top{
+width:100%
+
+}
+input{
+width:100%;
+}
+footer.second p{
+width:100%;
+}
+
+ }
+</style>
+</head>
+<body>
+<header>
+    <div id="header-inner">
+	   <a href="index.html" id="logo"></a>
+	   <nav>
+	     <a href="#" id="menu-icon"></a>
+	<ul>
+	     <li><a href="newSubEntry.html">HOME</a></li>
+		 <li><a href="updateOldSub.html" >EDIT</a></li>
+		 <li><a href="#" >VIEW</a></li>
+	</ul>
+	  </nav>
+	</div>
+</header>
+  <h2>Subjects INSERTION</h2>
+<form id='formid' action="subinsert.php" method="post" >
+<div class="top">
+SEM:
+  <select name="sem" id="sem" >
+    <option value="1st">1st</option>
+    <option value="2nd">2nd</option>
+    <option value="3rd">3rd</option>
+    <option value="4th">4th</option>
+	<option value="5th">5th</option>
+	<option value="6th">6th</option>
+	<option value="7th">7th</option>
+	<option value="8th">8th</option>
+  </select>
+BRANCH:
+  <select name="branch" id="branch" >
+    <option value="CSE">CSE</option>
+    <option value="ISE">ISE</option>
+    <option value="ECE">ECE</option>
+    <option value="MECH">MECH</option>
+	<option value="MECH">CIVIL</option>
+	<option value="EEE">EEE</option>
+  </select>
+</div>
+<div class="one-half" >
+<h2>Regular Subjects</h2>
+<table border="1">
+<tr><td>Subjects</td> <td width="20%" >Sub Code</td>
+<tr><td> <input type="text" id="sub1" name="sub1" /></td>    <td><input type="text" id="sub1c" name="sub1c" /></td></tr>
+<tr><td> <input type="text" id="sub2" name="sub2" /></td>    <td><input type="text" id="sub2c" name="sub2c" /></td></tr>
+<tr><td> <input type="text" id="sub3" name="sub3" /></td>    <td><input type="text" id="sub3c" name="sub3c" /></td></tr>
+<tr><td> <input type="text" id="sub4" name="sub4" /></td>    <td><input type="text" id="sub4c" name="sub4c" /></td></tr>
+<tr><td> <input type="text" id="sub5" name="sub5" /></td>    <td><input type="text" id="sub5c" name="sub5c" /></td></tr>
+<tr><td> <input type="text" id="sub6" name="sub6" /></td>    <td><input type="text" id="sub6c" name="sub6c" /></td></tr>
+<tr><td> <input type="text" id="sub7" name="sub7" /></td>    <td><input type="text" id="sub7c" name="sub7c" /></td></tr>
+<tr><td> <input type="text" id="sub8" name="sub8" /></td>    <td><input type="text" id="sub8c" name="sub8c" /></td></tr>
+</table>
+</div>
+
+<div class="one-half">
+<h2>Elective-Subjects</h2>
+<table border="1">
+<tr><td>Subjects</td> <td width="20%">Sub Code</td></tr>
+<tr><td> <input type="text" id="sub9" name="sub9" /></td>      <td><input type="text" id="sub9c" name="sub9c" /></td></tr>
+<tr><td> <input type="text" id="sub10" name="sub10" /></td>    <td><input type="text" id="sub10c" name="sub10c" /></td></tr>
+<tr><td> <input type="text" id="sub11" name="sub11" /></td>    <td><input type="text" id="sub11c" name="sub11c" /></td></tr>
+<tr><td> <input type="text" id="sub12" name="sub12" /></td>    <td><input type="text" id="sub12c" name="sub12c" /></td></tr>
+<tr><td> <input type="text" id="sub13" name="sub13" /></td>    <td><input type="text" id="sub13c" name="sub13c" /></td></tr>
+<tr><td> <input type="text" id="sub14" name="sub14" /></td>    <td><input type="text" id="sub14c" name="sub14c" /></td></tr>
+<tr><td> <input type="text" id="sub15" name="sub15" /></td>    <td><input type="text" id="sub15c" name="sub15c" /></td></tr>
+<tr><td> <input type="text" id="sub16" name="sub16" /></td>    <td><input type="text" id="sub16c" name="sub16c" /></td></tr>
+</table>
+
+</div>
+<input type="submit" class="submit"  value="SUBMIT"/>
+</form>
+<script type='text/javascript'>
+    /* attach a submit handler to the form */
+    $("#formid").submit(function(event) {
+
+      /* stop form from submitting normally */
+      event.preventDefault();
+
+      /* get the action attribute from the <form action=""> element */
+      var $form = $( this ),
+          url = $form.attr( 'action' );
+					      /* Send the data using post with element id name and name2*/
+      var posting = $.post( url,{ name: $('#sem').val(), name2: $('#branch').val(), name3: $('#sub1').val(),
+	  name4: $('#sub1c').val(), name5: $('#sub2').val(), name6: $('#sub2c').val(), name7: $('#sub3').val(),
+	  name8: $('#sub3c').val(), name9: $('#sub4').val(),name10: $('#sub4c').val(), name11: $('#sub5').val(),
+	  name12: $('#sub5c').val(), name13: $('#sub6').val(),name14: $('#sub6c').val(), name15: $('#sub7').val(),
+	  name16: $('#sub7c').val(), name17: $('#sub8').val(),name18: $('#sub8c').val(), name19: $('#sub9').val(),
+	  name20: $('#sub9c').val(), name21: $('#sub10').val(), name22: $('#sub10c').val(), name23: $('#sub11').val(),
+	  name24: $('#sub11c').val(), name25: $('#sub12').val(), name26: $('#sub12c').val(), name27: $('#sub13').val(),
+	  name28: $('#sub13c').val(), name29: $('#sub14').val(),name30: $('#sub14c').val(), name31: $('#sub15').val(),
+	  name32: $('#sub15c').val(), name33: $('#sub16').val(),name34: $('#sub16c').val() } );
+
+      /* Alerts the results */
+      posting.done(function(data){
+        alert(data);
+      });
+    });
+</script>
+<footer class="second">
+    <p>&copyVVCE:devloped by Najmus Seemab</p>
+</footer>
+</body>
+</html>
